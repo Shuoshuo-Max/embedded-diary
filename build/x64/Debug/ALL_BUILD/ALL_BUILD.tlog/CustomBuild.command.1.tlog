@@ -1,0 +1,10 @@
+^C:\USERS\21190\DESKTOP\EMBED\EMBEDDED-DIARY\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/21190/Desktop/embed/embedded-diary -BC:/Users/21190/Desktop/embed/embedded-diary/build --check-stamp-file C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

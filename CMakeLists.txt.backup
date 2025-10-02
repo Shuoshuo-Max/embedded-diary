@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.14)
+
+# 注释掉 googletest 在线下载部分（由于网络问题）
+# include(FetchContent)
+# FetchContent_Declare(
+#     googletest
+#     URL https://github.com/google/googletest/archive/03597a01ee50ed33e9fd28f9d13e3a4b8f9a3c8a.zip
+# )
+# 
+# FetchContent_MakeAvailable(googletest)
+
+# 启用测试
+enable_testing()
+
+# 创建测试可执行目标（不依赖googletest）
+add_executable(RingQueueTests RingQueueTest.cpp)
+
+# 设置包含目录
+target_include_directories(RingQueueTests PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+# 链接库（暂时注释掉googletest依赖）
+# target_link_libraries(RingQueueTests RingQueue gtest_main)
+target_link_libraries(RingQueueTests RingQueue)  # 只链接主库
+
+# 暂时注释掉GoogleTest集成
+# include(GoogleTest)
+# gtest_discover_tests(RingQueueTests)
+
+# 添加简单测试
+add_test(NAME SimpleRingQueueTest COMMAND RingQueueTests)

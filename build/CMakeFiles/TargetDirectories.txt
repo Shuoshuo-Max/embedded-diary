@@ -1,3 +1,6 @@
-C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/RingQueue.dir
-C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/edit_cache.dir
-C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/rebuild_cache.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/tests/CMakeFiles/RingQueueTests.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/tests/CMakeFiles/RUN_TESTS.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/tests/CMakeFiles/ALL_BUILD.dir
