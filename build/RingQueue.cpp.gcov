@@ -1,0 +1,48 @@
+        -:    0:Source:C:/Users/21190/Desktop/embed/embedded-diary/src/RingQueue.cpp
+        -:    0:Graph:CMakeFiles/RingQueue.dir/src/RingQueue.cpp.gcno
+        -:    0:Data:CMakeFiles/RingQueue.dir/src/RingQueue.cpp.gcda
+        -:    0:Runs:0
+        -:    1:﻿#include <iostream>
+        -:    2:#include <vector>
+        -:    3:
+        -:    4:class RingQueue {
+        -:    5:private:
+        -:    6:    std::vector<int> data;
+        -:    7:    int head, tail, size, capacity;
+        -:    8:public:
+    #####:    9:    RingQueue(int cap) : data(cap), head(0), tail(0), size(0), capacity(cap) {}
+        -:   10:    
+    #####:   11:    bool enqueue(int value) {
+    #####:   12:        if (size == capacity) return false;
+    #####:   13:        data[tail] = value;
+    #####:   14:        tail = (tail + 1) % capacity;
+    #####:   15:        size++;
+    #####:   16:        return true;
+        -:   17:    }
+        -:   18:    
+    #####:   19:    bool dequeue() {
+    #####:   20:        if (size == 0) return false;
+    #####:   21:        head = (head + 1) % capacity;
+    #####:   22:        size--;
+    #####:   23:        return true;
+        -:   24:    }
+        -:   25:    
+    #####:   26:    int front() {
+    #####:   27:        return size > 0 ? data[head] : -1;
+        -:   28:    }
+        -:   29:};
+        -:   30:
+    #####:   31:int main() {
+    #####:   32:    RingQueue q(5);
+    #####:   33:    q.enqueue(1);
+    #####:   34:    q.enqueue(2);
+    #####:   35:    q.enqueue(3);
+        -:   36:    
+    #####:   37:    std::cout << "Coverage test completed" << std::endl;
+    #####:   38:    std::cout << "Front: " << q.front() << std::endl;
+        -:   39:    
+    #####:   40:    q.dequeue();
+    #####:   41:    std::cout << "After dequeue, Front: " << q.front() << std::endl;
+        -:   42:    
+    #####:   43:    return 0;
+    #####:   44:}

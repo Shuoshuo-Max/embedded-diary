@@ -1,0 +1,3 @@
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/RingQueue.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/edit_cache.dir
+C:/Users/21190/Desktop/embed/embedded-diary/build/CMakeFiles/rebuild_cache.dir
